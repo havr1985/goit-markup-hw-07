@@ -13,9 +13,14 @@
   </head>
   <body>
     <header class="main">
-      <div class="container main-nav">
+      <div class="container header-box">
       <nav class="main-nav">
         <a href="./index.html" class="logo link">Web<span class="logoelement">Studio</span></a>
+        <button type="button" class="mobile-menu-open js-open-menu" 
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+          <svg class="mobile-menu-icon" width="32" height="22">
+          <use href="./images/icons.svg#icon-hamburger"></use></svg></button>
         <ul class="site-nav list">
           <li class="nav-item"> <a href="./index.html" class="nav-link active link">Studio</a></li>
           <li class="nav-item"> <a href="./portfolio.html" class="nav-link link">Portfolio</a></li>
@@ -24,14 +29,45 @@
       </nav>
       <address class="kontakts">
         <ul class="kontakts-list list">
-          <li class="item"><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
-          <li class="item"><a href="tel:+110001111111" class="link">+11 (000) 111-11-11</a></li>
+          <li class="kontakt-item"><a href="mailto:info@devstudio.com" class="kontakt-link link">info@devstudio.com</a></li>
+          <li class="kontakt-item"><a href="tel:+110001111111" class="kontakt-link link">+11 (000) 111-11-11</a></li>
         </ul>
       </address>
       </div>
+      <div class="mobile-menu-container js-menu-container">
+        <button type="button" class="mobile-menu-close js-close-menu"><svg class="menu-close-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg></button>
+        <ul class="mobile-menu list">
+          <li class="mobile-menu-item"><a href="./index.html" class="mobile-menu-link active link">Studio</a></li>
+          <li class="mobile-menu-item"><a href="./portfolio.html" class="mobile-menu-link link">Portfolio</a></li>
+          <li class="mobile-menu-item"><a href="" class="mobile-menu-link link">Contacts</a></li>
+        </ul>
+        <address>
+        <ul class="mobile-contact-list list">
+          <li class="contact-item"><a href="tel:+110001111111" class="contact-link-tel link">+11 (000) 111-11-11</a></li>
+          <li class="contact-item"><a href="mailto:info@devstudio.com" class="contact-link-email link">info@devstudio.com</a></li>
+        </ul>
+        </address>
+        <ul class="mobile-social-list list">
+          <li class="mobile-social-item"><a href="" class="mobile-social-link link"><svg class="mobile-social-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-instagram"></use>
+          </svg></a></li>
+          <li class="mobile-social-item"><a href="" class="mobile-social-link link"><svg class="mobile-social-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-twitter"></use>
+          </svg></a></li>
+          <li class="mobile-social-item"><a href="" class="mobile-social-link link"><svg class="mobile-social-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-facebook"></use>
+          </svg></a></li>
+          <li class="mobile-social-item"><a href="" class="mobile-social-link link"><svg class="mobile-social-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-linkedin"></use>
+          </svg></a></li>
+        </ul>
+
+      </div>
     </header>
     <main>
-      <section class="hero overlay">
+      <!-- <section class="hero overlay">
         <div class="container">
         <h1 class="hero-title">Effective Solutions for Your Business</h1>
         <button data-modal-open type="button" class="hero-btn">Order Service</button>
@@ -261,9 +297,9 @@
           </a></li>
         </ul>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="bottom">
+    <!-- <footer class="bottom">
       <div class="container bottom-sections">
       <div class="logo-section">
       <a href="./index.html" class="logo-bottom link">Web<span class="logo-el-footer">Studio</span></a>
@@ -308,9 +344,9 @@
       </form>
       </div>
       </div>
-    </footer>
+    </footer> -->
 
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-btn" data-modal-close>
           <svg class="modal-btn-icon" width="8" height="8">
@@ -367,6 +403,7 @@
         </form>
       </div>
     </div>
-    <script src="./modal.js"></script>
+    <script src="./modal.js"></script> -->
+    <script defer src="./mobile-menu.js"></script>
   </body>
 </html>
