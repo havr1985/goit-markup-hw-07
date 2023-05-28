@@ -16,7 +16,7 @@ h4,
 h5,
 h6,
 p,
-ul{
+ul, li{
     margin: 0;
     padding: 0;
 }
@@ -911,11 +911,14 @@ screen and (min-resolution:192dpi) and (max-width:767px),
 .gallery-filter{
     display: flex;
     flex-wrap: wrap;
+    width: 270px;
     gap: 16px 24px;
     margin-bottom: 48px;
 }
+
+
 .filter-btn{
-    display: inline-block;
+    display: block;
     padding: 8px 16px;
     border: 1px solid var(--accent-color);
     border-radius: 4px;
@@ -948,6 +951,7 @@ screen and (min-resolution:192dpi) and (max-width:767px),
     
     .gallery-filter {
         display: flex;
+        width: 100%;
         flex-wrap: nowrap;
         justify-content: center;
         gap: 24px;
@@ -971,22 +975,17 @@ screen and (min-resolution:192dpi) and (max-width:767px),
      }
 }
 
-.projects{
+ .projects{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 .projects-link{
     display: block;
     transition: box-shadow var(--transition);
 }
-.projects > .projects-item:not(:nth-child(3n + 3)){
-    margin-right: 24px;
-}
-.projects > .projects-item:not(:nth-last-child(-n + 3)){
-    margin-bottom: 48px;
-}
+
 .projects > .projects-item{
-    width: calc((100% - 48px) / 3);
+    
 }
 .projects > .projects-link{
     display: block;
@@ -997,6 +996,10 @@ screen and (min-resolution:192dpi) and (max-width:767px),
     border-top: none;
 }
 .project-title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
     margin-bottom: 8px;
 }
 .projects .projects-link{
@@ -1033,7 +1036,7 @@ screen and (min-resolution:192dpi) and (max-width:767px),
 .projects-link:focus .action-text{
     transform: translate(0, 0);
     
-}
+} 
 
 /*------MODAL-WINDOW------*/
 
