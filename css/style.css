@@ -164,7 +164,7 @@ body{
 .mobile-menu-close{
     position: absolute;
     top: 24px;
-    left: 380px;
+    right: 24px;
     border-color: transparent;
     border: none;
     padding: 0;
@@ -175,7 +175,6 @@ body{
     border: 1px solid var(--header-text-color);
     border-radius: 50%;
     cursor: pointer;
-    opacity: 1;
 }
 
 .mobile-menu{
@@ -208,7 +207,7 @@ body{
 .contact-link-tel{
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
@@ -226,7 +225,7 @@ body{
 
 .mobile-social-list{
     display: flex;
-    gap: 56px;
+    gap: 32px;
 }
 
 .mobile-social-link {
@@ -241,6 +240,17 @@ body{
 
 .mobile-social-icon{
     fill: var(--light-mode-color);
+}
+
+@media screen and (min-width:428px) {
+    .contact-link-tel{
+        font-size: 36px;
+    }
+
+    .mobile-social-list{
+        gap: 56px;
+    }
+    
 }
 
 @media screen and (min-width:768px) {
@@ -351,9 +361,9 @@ body{
     background-size: cover;
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (max-width:767px),
-screen and (min-resolution:192dpi) and (max-width:767px),
- screen and (min-resolution:2dppx) and (max-width:767px){
+@media screen and (min-device-pixel-ratio: 2) and (max-width:427px),
+screen and (min-resolution:192dpi) and (max-width:427px),
+ screen and (min-resolution:2dppx) and (max-width:427px){
     .overlay {
         min-height: 432px;
         margin-right: auto;
@@ -405,53 +415,54 @@ screen and (min-resolution:192dpi) and (max-width:767px),
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-@media screen and (min-width:768px) {
-    .hero {
-            padding-top: 188px;
-            padding-bottom: 188px;
-    }
+@media screen and (min-width:428px) {
     .overlay{
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/hero-tablets.jpg);
 
     }
 
-        @media screen and (min-device-pixel-ratio: 2) and (min-width:768px),
-        screen and (min-resolution:192dpi) and (min-width:768px),
-        screen and (min-resolution:2dppx) and (min-width:768px){
+        @media screen and (min-device-pixel-ratio: 2) and (min-width:428px),
+        screen and (min-resolution:192dpi) and (min-width:428px),
+        screen and (min-resolution:2dppx) and (min-width:428px){
             .overlay {
                     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
                     url(../images/hero-tablets@2x.jpg);
         }
     }
 
-    .hero-title{
+}
+
+@media screen and (min-width:768px) {
+    .hero-title {
         max-width: 496px;
         margin-bottom: 36px;
         font-size: 56px;
         line-height: 1.07;
-    }
+    } 
 }
 
-@media screen and (min-width:1158px) {
+@media screen and (min-width:769px) {
     .overlay{
         max-width: 1440px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/people-office.jpg);
     }
 
-        @media screen and (min-device-pixel-ratio: 2) and (min-width:1158px),
-        screen and (min-resolution:192dpi) and (min-width:1158px),
-        screen and (min-resolution:2dppx) and (min-width:1158px) {
+        @media screen and (min-device-pixel-ratio: 2) and (min-width:768px),
+        screen and (min-resolution:192dpi) and (min-width:768px),
+        screen and (min-resolution:2dppx) and (min-width:768px) {
             .overlay {
                 background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
                 url(../images/people-office@2x.jpg);
             }
         }
+}
 
-        .hero-title{
+@media screen and (min-width:1158px) {
+    .hero-title {
             margin-bottom: 48px;
-        }
+        } 
 }
 
 /*------------ADVANTAGE---------*/
@@ -632,7 +643,7 @@ screen and (min-resolution:192dpi) and (max-width:767px),
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 24px;
+        gap: 64px 24px;
     }
     
 }
@@ -845,7 +856,9 @@ screen and (min-resolution:192dpi) and (max-width:767px),
         flex-direction: row;
         flex-wrap: wrap;
         gap:72px 24px;
-        justify-content: center;
+        width: 552px;
+        margin-left: auto;
+        margin-right: auto;
         align-items: baseline;
     }
 
@@ -853,16 +866,18 @@ screen and (min-resolution:192dpi) and (max-width:767px),
         text-align: start;
     }
 
+    .logo-section {
+         width: 264px;
+    
+    }
+
     .social-title {
         text-align: start;
     }
     
-    .section-subscribe{
-        margin-left: 123px;
-    }
-
     .subscribe-form-input {
         width: 264px;
+        margin-bottom: 0;
     }
 
     .subscribe-form{
@@ -883,12 +898,11 @@ screen and (min-resolution:192dpi) and (max-width:767px),
     }
 
     .bottom-sections{
-        justify-content: flex-start;
+        width: 100%;
         gap: 0;
     }
 
     .logo-section{
-        width: 264px;
         margin-right: 120px;
     }
 
@@ -984,9 +998,6 @@ screen and (min-resolution:192dpi) and (max-width:767px),
     transition: box-shadow var(--transition);
 }
 
-.projects > .projects-item{
-    
-}
 .projects > .projects-link{
     display: block;
 }
@@ -1046,6 +1057,7 @@ screen and (min-resolution:192dpi) and (max-width:767px),
     left: 0;
     min-width: 100%;
     min-height: 100%;
+    overflow: scroll;
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity var(--transition),
     visibility var(--transition);
@@ -1060,7 +1072,7 @@ screen and (min-resolution:192dpi) and (max-width:767px),
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 392px;
+    width: 90%;
     min-height: 576px;
     padding: 72px 16px 24px;
     background-color: #FCFCFC;
@@ -1068,6 +1080,8 @@ screen and (min-resolution:192dpi) and (max-width:767px),
     border-radius: 4px;
     transition: transform var(--transition);
 }
+
+
 .modal-btn{
     position: absolute;
     top: 24px;
@@ -1236,17 +1250,39 @@ screen and (min-resolution:192dpi) and (max-width:767px),
 .modal-form-button:hover,
 .modal-form-button:focus{
     background-color: var(--pressed-state-color);
-} 
+}
+@media screen and (max-height: 767px) and (orientation: landscape) {
+    .modal{
+        transform: translate(-50%, -25%);
+        
+    }
+    
+}
+@media screen and (min-width:428px) {
+    .modal{
+        width: 392px;
+    }
+    
+}
 
 @media screen and (min-width:768px) {
     .modal{
         min-width: 408px;
         padding: 72px 25px 24px 23px;
     }
+
+        
 }
 
 @media screen and (min-width:1158px) {
     .modal{
         padding: 72px 24px 24px;
     }
+}
+
+@media screen and (orientation: landscape) and (max-width:767px) {
+    .modal{
+        transform: translate(-50%, -25%);
+    }
+    
 }
