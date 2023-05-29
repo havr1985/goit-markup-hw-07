@@ -81,7 +81,18 @@
     <ul class="projects list">
         <li class="projects-item"><a href="" class="projects-link link">
           <div class="action">
-          <img src="./images/proj11.jpg" alt="Banking">
+          <picture>
+            <source
+            srcset="./images/proj1-desctop.jpg 1x, ./images/img1-desctop@2x.jpg 2x"
+            media="(min-width: 1158px)">
+            <source
+            srcset="./images/img1-tablet.jpg 1x, ./images/img1-tablet@2x.jpg 2x"
+            media="(min-width: 768px)">
+            <source
+            srcset="./images/img1-mobile.jpg 1x, ./images/img1-mobile2x.jpg 2x"
+            media="(min-width: 428px)">
+          <img src="./images/proj1.jpg" alt="Banking">
+          </picture>
           <p class="action-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
           </div>
             <div class="card-content"><h2 class="project-title">Banking App Interface Concept</h2>
