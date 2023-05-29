@@ -992,6 +992,7 @@ screen and (min-resolution:192dpi) and (max-width:427px),
  .projects{
     display: flex;
     flex-direction: column;
+    gap: 48px;
 }
 .projects-link{
     display: block;
@@ -1047,7 +1048,16 @@ screen and (min-resolution:192dpi) and (max-width:427px),
 .projects-link:focus .action-text{
     transform: translate(0, 0);
     
-} 
+}
+
+@media screen and (min-width:768px) {
+    .projects {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap:72px 24px;
+    }
+    
+}
 
 /*------MODAL-WINDOW------*/
 
