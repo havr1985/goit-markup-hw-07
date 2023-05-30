@@ -1046,6 +1046,14 @@ screen and (min-resolution:192dpi) and (max-width:427px),
     
     overflow: auto;
     transform: translate(0, 100%);
+    transition: transform var(--transition);
+    color: var(--light-mode-color);
+    background-color: var(--primary-brend-color);
+}
+
+.projects-link:hover .action-text,
+.projects-link:focus .action-text {
+    transform: translate(0, 0);
 }
 
 @media screen and (min-width:768px) {
@@ -1060,17 +1068,6 @@ screen and (min-resolution:192dpi) and (max-width:427px),
 @media screen and (min-width:1158px) {
     .projects{
         gap: 48px 24px;
-    }
-
-    .action-text {
-    transition: transform var(--transition);
-    color: var(--light-mode-color);
-    background-color: var(--primary-brend-color);
-     }
-    
-    .projects-link:hover .action-text,
-    .projects-link:focus .action-text {
-            transform: translate(0, 0);
     }
 }
 
