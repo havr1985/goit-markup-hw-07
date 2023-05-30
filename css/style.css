@@ -1007,6 +1007,11 @@ screen and (min-resolution:192dpi) and (max-width:427px),
     border: 1px solid var(--accent-color);
     border-top: none;
 }
+
+.card-image{
+    width: 100%;
+}
+
 .project-title{
     font-weight: 500;
     font-size: 20px;
@@ -1022,7 +1027,8 @@ screen and (min-resolution:192dpi) and (max-width:427px),
 .projects-link:focus{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.action{
+
+.action {
     position: relative;
     overflow: hidden;
 }
@@ -1037,17 +1043,9 @@ screen and (min-resolution:192dpi) and (max-width:427px),
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-
+    
     overflow: auto;
     transform: translate(0, 100%);
-    transition: transform var(--transition);
-    color: var(--light-mode-color);
-    background-color: var(--primary-brend-color);
-}
-.projects-link:hover .action-text,
-.projects-link:focus .action-text{
-    transform: translate(0, 0);
-    
 }
 
 @media screen and (min-width:768px) {
@@ -1057,6 +1055,23 @@ screen and (min-resolution:192dpi) and (max-width:427px),
         gap:72px 24px;
     }
     
+}
+
+@media screen and (min-width:1158px) {
+    .projects{
+        gap: 48px 24px;
+    }
+
+    .action-text {
+    transition: transform var(--transition);
+    color: var(--light-mode-color);
+    background-color: var(--primary-brend-color);
+     }
+    
+    .projects-link:hover .action-text,
+    .projects-link:focus .action-text {
+            transform: translate(0, 0);
+    }
 }
 
 /*------MODAL-WINDOW------*/
